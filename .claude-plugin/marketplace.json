@@ -1,0 +1,12 @@
+{
+  "name": "streetfighter-hud",
+  "owner": { "name": "Jon Borromeo" },
+  "description": "Street Fighter style HUD for Claude Code.",
+  "plugins": [
+    {
+      "name": "streetfighter-hud",
+      "source": "./",
+      "description": "A Street Fighter style HUD above the prompt: model as fighter, usage as health, context as super meter, effort as power level."
+    }
+  ]
+}
