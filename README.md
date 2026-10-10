@@ -2,6 +2,8 @@
 
 A Street Fighter style HUD above the Claude Code prompt, in the spirit of minecraft-hud.
 
+_Last updated: 2026-10-10_
+
 | Reading | HUD |
 |---|---|
 | Model | Your fighter (RYU = Opus, KEN = Sonnet, CHUN-LI = Haiku) |
