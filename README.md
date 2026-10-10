@@ -25,6 +25,55 @@ Terminal: block-character bars. Desktop / VS Code: pixel-art SVG. All art is ori
 
 3. The HUD appears above the prompt. It refreshes when a session starts and at the start and end of each turn, so it stays current as you work.
 
+### Windows Desktop
+
+The Claude Code Desktop app has no `--plugin-dir` flag, and plugins don't load in WSL sessions. Copy the plugin to the Windows drive and install it through a local marketplace.
+
+Requires Claude Code v2.1.286 or later in Desktop (check with `/status`). Use the **Code** tab, not a WSL session.
+
+1. Clone the repo on Windows, not from a `\\wsl$` path:
+
+   ```
+   git clone <repo-url> C:\Users\<you>\plugins\streetfighter-marketplace\streetfighter-hud
+   ```
+
+2. Create `C:\Users\<you>\plugins\streetfighter-marketplace\.claude-plugin\marketplace.json`:
+
+   ```json
+   {
+     "name": "local-mods",
+     "owner": { "name": "<your name>" },
+     "plugins": [
+       { "name": "streetfighter-hud", "source": "./streetfighter-hud" }
+     ]
+   }
+   ```
+
+3. From a Windows terminal, validate and install:
+
+   ```
+   claude plugin validate C:\Users\<you>\plugins\streetfighter-marketplace\streetfighter-hud
+   claude plugin marketplace add C:\Users\<you>\plugins\streetfighter-marketplace --scope user
+   claude plugin install streetfighter-hud@local-mods --scope user
+   ```
+
+4. In Desktop, open **+ > Plugins > Manage plugins** and confirm the plugin is enabled, or run `/reload-plugins`. The HUD appears above the prompt.
+
+If the plugin doesn't show up in Desktop, add this to `%USERPROFILE%\.claude\settings.json` instead of relying on the marketplace (escape backslashes in JSON):
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "local-mods": {
+      "source": { "source": "directory", "path": "C:\\Users\\<you>\\plugins\\streetfighter-marketplace" }
+    }
+  },
+  "enabledPlugins": {
+    "streetfighter-hud@local-mods": true
+  }
+}
+```
+
 ### Reading the HUD
 
 - **Fighter name**: the model you're running. Switch models with `/model` and the fighter changes.
