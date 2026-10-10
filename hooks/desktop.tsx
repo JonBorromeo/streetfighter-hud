@@ -3,7 +3,7 @@ import { clamp, effortLevel, fighterFor, healthLeft, kindLabel, modelLimits, res
 
 const W = 320
 const PX = 4
-const PLATE_W = 108 // fits "CHUN-LI (Haiku)"
+const PLATE_W = 112 // fits "CHUN-LI (Haiku)" with slack for wider monospace fonts
 const HEALTH_X = PX + PLATE_W + PX
 
 function rect(x: number, y: number, w: number, h: number, fill: string): string {
@@ -27,13 +27,10 @@ export function svgSource(reading: Reading, now: number): string {
   const worst = worstLimit(reading.limits)
   const left = healthLeft(worst)
   const parts: string[] = [rect(0, 0, W, 84, '#10102a')]
-  // name plate
-  // Ryu is white, so his plate is dark with a white outline to keep the text readable.
-  const isWhite = fighter.hex === '#ffffff'
-  if (isWhite) parts.push(rect(PX, PX, PLATE_W, 16, '#fff'), rect(PX + 2, PX + 2, PLATE_W - 4, 12, '#000'))
-  else parts.push(rect(PX, PX, PLATE_W, 16, fighter.hex), rect(PX, PX, PLATE_W, PX, '#fff4'))
+  // name plate: colored border around a dark inner plate, so each segment's own color reads on black
+  parts.push(rect(PX, PX, PLATE_W, 16, fighter.hex), rect(PX + 2, PX + 2, PLATE_W - 4, 12, '#000'), rect(PX, PX, PLATE_W, PX, '#fff4'))
   const tspans = fighter.segments.map(s => `<tspan fill="${s.hex}">${s.text}</tspan>`).join('')
-  parts.push(`<text x="${2 * PX}" y="${3 * PX + 8}" font-family="monospace" font-size="11" font-weight="bold" fill="#fff">${tspans}</text>`)
+  parts.push(`<text x="${2 * PX}" y="${3 * PX + 6}" font-family="monospace" font-size="11" font-weight="bold" fill="#fff">${tspans}</text>`)
   // health
   if (left === null) {
     parts.push(`<text x="${HEALTH_X}" y="16" font-family="monospace" font-size="11" fill="#889">HEALTH n/a</text>`)
