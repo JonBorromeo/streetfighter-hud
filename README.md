@@ -18,14 +18,14 @@ Terminal: block-character bars. Desktop / VS Code: pixel-art SVG. All art is ori
 
 ### Install
 
-In Claude Code (the CLI, or the Code tab in the Desktop app), run:
+In the Claude Code CLI, run:
 
 ```
 /plugin marketplace add JonBorromeo/streetfighter-hud
 /plugin install streetfighter-hud@streetfighter-hud
 ```
 
-The HUD loads the next time the session starts. The same commands work in the VS Code extension.
+The HUD loads the next time the session starts. On Windows Desktop, see the section below.
 
 ### Try it from a local clone (development)
 
@@ -42,7 +42,7 @@ The HUD appears above the prompt. It refreshes when a session starts and at the 
 
 ### Windows Desktop
 
-The Claude Code Desktop app has no `--plugin-dir` flag, and plugins don't load in WSL sessions. Copy the plugin to the Windows drive and install it through a local marketplace.
+The Claude Code Desktop app has no `--plugin-dir` flag, and plugins don't load in WSL sessions. Install it through a local marketplace on the Windows drive instead.
 
 Requires Claude Code v2.1.286 or later in Desktop (check with `/status`). Use the **Code** tab, not a WSL session.
 
