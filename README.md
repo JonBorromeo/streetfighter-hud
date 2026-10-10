@@ -16,14 +16,29 @@ Terminal: block-character bars. Desktop / VS Code: pixel-art SVG. All art is ori
 
 ## Usage
 
+### Install
+
+In Claude Code (the CLI, or the Code tab in the Desktop app), run:
+
+```
+/plugin marketplace add JonBorromeo/streetfighter-hud
+/plugin install streetfighter-hud@streetfighter-hud
+```
+
+The HUD loads the next time the session starts. The same commands work in the VS Code extension.
+
+### Try it from a local clone (development)
+
 1. Clone this repo, e.g. to `~/streetfighter-hud`.
-2. Start Claude Code with the plugin loaded:
+2. Start the CLI with the plugin loaded:
 
    ```sh
    claude --plugin-dir ~/streetfighter-hud
    ```
 
-3. The HUD appears above the prompt. It refreshes when a session starts and at the start and end of each turn, so it stays current as you work.
+### Using it
+
+The HUD appears above the prompt. It refreshes when a session starts and at the start and end of each turn, so it stays current as you work.
 
 ### Windows Desktop
 
