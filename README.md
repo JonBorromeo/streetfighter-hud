@@ -2,9 +2,22 @@
 
 A Street Fighter style HUD above the Claude Code prompt.
 ## RYU as Opus
-<img width="1405" height="210" alt="image" src="https://github.com/user-attachments/assets/b996baa6-7293-4f95-9cfb-2dfa78f3d3f0" />
+CLI
+<img width="1385" height="210" alt="image" src="https://github.com/user-attachments/assets/eed60c90-97aa-44b2-831b-5fc2c6ee7a1f" />
+Desktop
+<img width="962" height="227" alt="image" src="https://github.com/user-attachments/assets/4597ff61-b3b4-44d4-8b3f-a21bf20d410c" />
 
+## KEN as Sonnet
+CLI
+<img width="1398" height="204" alt="image" src="https://github.com/user-attachments/assets/65a672d2-48c9-48f9-8cab-6a2afa583f13" />
+Desktop
+<img width="967" height="224" alt="image" src="https://github.com/user-attachments/assets/99f894f2-4f8f-4ca1-8464-57c9ea9e8cb0" />
 
+## CHUN-LI as Haiku
+CLI
+<img width="1448" height="205" alt="image" src="https://github.com/user-attachments/assets/1a5a2af5-bdaf-48d5-a02d-65f0f547940a" />
+Desktop
+<img width="965" height="227" alt="image" src="https://github.com/user-attachments/assets/e70b6d7b-0117-4f22-9fee-494c0eabbc06" />
 _Last updated: 2026-10-10_
 
 | Reading | HUD |
