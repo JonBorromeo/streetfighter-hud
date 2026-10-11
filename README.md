@@ -1,6 +1,9 @@
 # streetfighter-hud
 
-A Street Fighter style HUD above the Claude Code prompt, in the spirit of minecraft-hud.
+A Street Fighter style HUD above the Claude Code prompt.
+## RYU as Opus
+<img width="1405" height="210" alt="image" src="https://github.com/user-attachments/assets/b996baa6-7293-4f95-9cfb-2dfa78f3d3f0" />
+
 
 _Last updated: 2026-10-10_
 
