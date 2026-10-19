@@ -1,12 +1,14 @@
 import type { Reading } from '../types'
-import { bar, fighterFor, healthLeft, kindLabel, modelLimits, resetIn, stars, worstLimit } from './model'
+import { bar, fighterFor, healthLeft, healthLimit, isKo, kindLabel, modelLimits, resetIn, staminaLimit, stars } from './model'
 
 export function Terminal({ ui, reading, now }: { ui: any; reading: Reading; now: number }) {
   const { Box, Text } = ui
   const fighter = fighterFor(reading.model)
-  const worst = worstLimit(reading.limits)
+  const worst = healthLimit(reading.limits)
+  const week = staminaLimit(reading.limits)
   const left = healthLeft(worst)
-  const isKo = left === 0
+  const weekLeft = healthLeft(week)
+  const ko = isKo(left, weekLeft)
   const extra = modelLimits(reading.limits)
 
   return (
@@ -20,9 +22,21 @@ export function Terminal({ ui, reading, now }: { ui: any; reading: Reading; now:
           <Text dimColor>HEALTH n/a </Text>
         ) : (
           <Text>
-            <Text color={isKo ? 'red' : left < 25 ? 'red' : 'yellow'}>[{bar(left, 20)}]</Text>
-            <Text bold> {isKo ? 'KO!' : `${Math.round(left)}%`}</Text>
+            <Text color={left < 25 ? 'red' : 'yellow'}>[{bar(left, 20)}]</Text>
+            <Text bold> {ko ? 'KO!' : `${Math.round(left)}%`}</Text>
             <Text dimColor> {kindLabel(worst!.kind)} {resetIn(worst!.resetsAt, now)}</Text>
+          </Text>
+        )}
+      </Box>
+      <Box>
+        {weekLeft === null ? (
+          <Text dimColor>STAMINA n/a</Text>
+        ) : (
+          <Text>
+            <Text>STAMINA (weekly) </Text>
+            <Text color={weekLeft < 25 ? 'red' : 'green'}>[{bar(weekLeft, 10)}]</Text>
+            <Text bold> {Math.round(weekLeft)}%</Text>
+            <Text dimColor> {resetIn(week!.resetsAt, now)}</Text>
           </Text>
         )}
       </Box>

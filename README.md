@@ -23,7 +23,8 @@ _Last updated: 2026-10-10_
 | Reading | HUD |
 |---|---|
 | Model | Your fighter (RYU = Opus, KEN = Sonnet, CHUN-LI = Haiku) |
-| Usage (5h / 7d, whichever is more used) | Health bar, KO at 0, reset countdown |
+| 5h usage | Health bar, KO at 0, reset countdown |
+| 7d usage | STAMINA (weekly) bar, KO at 0, reset countdown |
 | Context window | SUPER (context) meter |
 | Effort | POWER stars |
 | Extra per-model limits, when reported | Small readouts |
