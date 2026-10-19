@@ -4,6 +4,7 @@ export type Segment = { text: string; color: string; hex: string }
 export type Fighter = { name: string; label: string; color: string; hex: string; segments: Segment[] }
 
 const KNOWN_KINDS = ['five_hour', 'seven_day', 'spend_limit']
+const HEALTH_KINDS = ['five_hour', 'spend_limit']
 
 const WHITE = { color: 'white', hex: '#ffffff' }
 const RED = { color: 'red', hex: '#d02a2a' }
@@ -28,13 +29,18 @@ export function fighterFor(model: string): Fighter {
   return fighter('ROOKIE', 'ROOKIE', GRAY)
 }
 
-/** The window the person has used most of, like minecraft-hud's hearts. */
-export function worstLimit(limits: Limit[]): Limit | null {
-  const main = limits.filter(l => KNOWN_KINDS.includes(l.kind))
+/** The short-window limit the person has used most of, like minecraft-hud's hearts. */
+export function healthLimit(limits: Limit[]): Limit | null {
+  const main = limits.filter(l => HEALTH_KINDS.includes(l.kind))
   return main.reduce<Limit | null>(
     (worst, l) => (worst === null || l.percentUsed > worst.percentUsed ? l : worst),
     null,
   )
+}
+
+/** The weekly window, shown as its own bar. */
+export function staminaLimit(limits: Limit[]): Limit | null {
+  return limits.find(l => l.kind === 'seven_day') ?? null
 }
 
 /** Windows beyond the account-wide ones, e.g. a per-model weekly limit. */
@@ -82,4 +88,9 @@ export function kindLabel(kind: string): string {
 /** Health left: usage is how much is gone. */
 export function healthLeft(limit: Limit | null): number | null {
   return limit === null ? null : clamp(100 - limit.percentUsed)
+}
+
+/** Running out of either window ends the fight. */
+export function isKo(health: number | null, stamina: number | null): boolean {
+  return health === 0 || stamina === 0
 }

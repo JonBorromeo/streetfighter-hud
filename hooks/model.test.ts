@@ -1,18 +1,30 @@
 import { test, expect } from 'claude-code/testing'
-import { bar, fighterFor, healthLeft, resetIn, stars, worstLimit } from './model'
+import { bar, fighterFor, healthLeft, healthLimit, isKo, resetIn, staminaLimit, stars } from './model'
 
-test('picks the most used window and flips it to health', () => {
-  const w = worstLimit([
-    { kind: 'five_hour', percentUsed: 23 },
-    { kind: 'seven_day', percentUsed: 60 },
-    { kind: 'seven_day_opus', percentUsed: 99 },
-  ])
-  expect(w?.kind).toBe('seven_day')
-  expect(healthLeft(w)).toBe(40)
+const limits = [
+  { kind: 'five_hour', percentUsed: 23 },
+  { kind: 'seven_day', percentUsed: 60 },
+  { kind: 'seven_day_opus', percentUsed: 99 },
+]
+
+test('health comes from the 5h window and stamina from the weekly one', () => {
+  const h = healthLimit(limits)
+  expect(h?.kind).toBe('five_hour')
+  expect(healthLeft(h)).toBe(77)
+  const s = staminaLimit(limits)
+  expect(s?.kind).toBe('seven_day')
+  expect(healthLeft(s)).toBe(40)
 })
 
-test('no limits means no health', () => {
-  expect(healthLeft(worstLimit([]))).toBeNull()
+test('no limits means no health or stamina', () => {
+  expect(healthLeft(healthLimit([]))).toBeNull()
+  expect(staminaLimit([{ kind: 'five_hour', percentUsed: 10 }])).toBeNull()
+})
+
+test('KO when either window is empty', () => {
+  expect(isKo(50, 0)).toBe(true)
+  expect(isKo(0, 50)).toBe(true)
+  expect(isKo(50, null)).toBe(false)
 })
 
 test('bars, stars, fighters and countdowns', () => {
