@@ -9,9 +9,9 @@ Desktop
 
 ## KEN as Sonnet
 CLI
-<img width="1398" height="204" alt="image" src="https://github.com/user-attachments/assets/65a672d2-48c9-48f9-8cab-6a2afa583f13" />
+<img width="1126" height="108" alt="image" src="https://github.com/user-attachments/assets/09d8dd83-9e1d-4026-a09c-a755f2b52dfe" />
 Desktop
-<img width="967" height="224" alt="image" src="https://github.com/user-attachments/assets/99f894f2-4f8f-4ca1-8464-57c9ea9e8cb0" />
+<img width="406" height="138" alt="image" src="https://github.com/user-attachments/assets/850c2efa-4744-45a7-aea5-f89f86f3e8a4" />
 
 ## CHUN-LI as Haiku
 CLI
