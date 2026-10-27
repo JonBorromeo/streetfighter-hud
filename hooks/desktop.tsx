@@ -1,7 +1,7 @@
 import type { Reading } from '../types'
 import { clamp, effortLevel, fighterFor, healthLeft, healthLimit, kindLabel, modelLimits, resetIn, staminaLimit } from './model'
 
-const W = 320
+const W = 384 // wide enough for "STAMINA (weekly) 100% 6d23h" at wider monospace fonts
 const H = 96
 const PX = 4
 const PLATE_W = 112 // fits "CHUN-LI (Haiku)" with slack for wider monospace fonts
