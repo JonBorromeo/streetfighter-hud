@@ -17,8 +17,8 @@ Desktop
 CLI  
 <img width="885" height="108" alt="image" src="https://github.com/user-attachments/assets/8f57999b-04c0-48fb-8818-ea0878d2152c" />  
 Desktop  
-<img width="484" height="120" alt="image" src="https://github.com/user-attachments/assets/33a2ab2f-f534-4ac4-88dc-9c819bd02d5d" />
-_Last updated: 2026-10-10_
+<img width="484" height="120" alt="image" src="https://github.com/user-attachments/assets/33a2ab2f-f534-4ac4-88dc-9c819bd02d5d" />  
+_Last updated: 2026-10-27_
 
 | Reading | HUD |
 |---|---|
