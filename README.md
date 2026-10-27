@@ -2,34 +2,22 @@
 
 A Street Fighter style HUD above the Claude Code prompt.
 ## RYU as Opus
-CLI
-
-
-<img width="850" height="104" alt="image" src="https://github.com/user-attachments/assets/2286a0f5-e209-4434-a5dd-330a867c5c78" />
-
-
-Desktop
-
-
-<img width="493" height="128" alt="image" src="https://github.com/user-attachments/assets/865bae1e-4f4e-4d4b-9900-b3dd91b2f491" />
+CLI  
+<img width="850" height="104" alt="image" src="https://github.com/user-attachments/assets/2286a0f5-e209-4434-a5dd-330a867c5c78" />  
+Desktop  
+<img width="493" height="128" alt="image" src="https://github.com/user-attachments/assets/865bae1e-4f4e-4d4b-9900-b3dd91b2f491" />  
 
 ## KEN as Sonnet
-CLI
-
-
-<img width="1126" height="108" alt="image" src="https://github.com/user-attachments/assets/09d8dd83-9e1d-4026-a09c-a755f2b52dfe" />
-
-
-Desktop
-
-
-<img width="487" height="130" alt="image" src="https://github.com/user-attachments/assets/95f4a05b-65ee-4cce-b263-862a7267f196" />
+CLI  
+<img width="1126" height="108" alt="image" src="https://github.com/user-attachments/assets/09d8dd83-9e1d-4026-a09c-a755f2b52dfe" />  
+Desktop  
+<img width="487" height="130" alt="image" src="https://github.com/user-attachments/assets/95f4a05b-65ee-4cce-b263-862a7267f196" />  
 
 ## CHUN-LI as Haiku
-![CLI](<img width="885" height="108" alt="image" src="https://github.com/user-attachments/assets/8f57999b-04c0-48fb-8818-ea0878d2152c" />)
-
-Desktop
-<img width="965" height="227" alt="image" src="https://github.com/user-attachments/assets/e70b6d7b-0117-4f22-9fee-494c0eabbc06" />
+CLI  
+<img width="885" height="108" alt="image" src="https://github.com/user-attachments/assets/8f57999b-04c0-48fb-8818-ea0878d2152c" />  
+Desktop  
+<img width="484" height="120" alt="image" src="https://github.com/user-attachments/assets/33a2ab2f-f534-4ac4-88dc-9c819bd02d5d" />
 _Last updated: 2026-10-10_
 
 | Reading | HUD |
