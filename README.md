@@ -26,8 +26,8 @@ Desktop
 <img width="487" height="130" alt="image" src="https://github.com/user-attachments/assets/95f4a05b-65ee-4cce-b263-862a7267f196" />
 
 ## CHUN-LI as Haiku
-CLI
-<img width="1448" height="205" alt="image" src="https://github.com/user-attachments/assets/1a5a2af5-bdaf-48d5-a02d-65f0f547940a" />
+![CLI](<img width="885" height="108" alt="image" src="https://github.com/user-attachments/assets/8f57999b-04c0-48fb-8818-ea0878d2152c" />)
+
 Desktop
 <img width="965" height="227" alt="image" src="https://github.com/user-attachments/assets/e70b6d7b-0117-4f22-9fee-494c0eabbc06" />
 _Last updated: 2026-10-10_
