@@ -11,7 +11,7 @@ Desktop
 CLI
 <img width="1126" height="108" alt="image" src="https://github.com/user-attachments/assets/09d8dd83-9e1d-4026-a09c-a755f2b52dfe" />
 Desktop
-<img width="406" height="138" alt="image" src="https://github.com/user-attachments/assets/850c2efa-4744-45a7-aea5-f89f86f3e8a4" />
+<img width="487" height="130" alt="image" src="https://github.com/user-attachments/assets/95f4a05b-65ee-4cce-b263-862a7267f196" />
 
 ## CHUN-LI as Haiku
 CLI
