@@ -3,14 +3,26 @@
 A Street Fighter style HUD above the Claude Code prompt.
 ## RYU as Opus
 CLI
+
+
 <img width="850" height="104" alt="image" src="https://github.com/user-attachments/assets/2286a0f5-e209-4434-a5dd-330a867c5c78" />
+
+
 Desktop
+
+
 <img width="493" height="128" alt="image" src="https://github.com/user-attachments/assets/865bae1e-4f4e-4d4b-9900-b3dd91b2f491" />
 
 ## KEN as Sonnet
 CLI
+
+
 <img width="1126" height="108" alt="image" src="https://github.com/user-attachments/assets/09d8dd83-9e1d-4026-a09c-a755f2b52dfe" />
+
+
 Desktop
+
+
 <img width="487" height="130" alt="image" src="https://github.com/user-attachments/assets/95f4a05b-65ee-4cce-b263-862a7267f196" />
 
 ## CHUN-LI as Haiku
